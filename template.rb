@@ -107,7 +107,6 @@ after_bundle do
   git add: "."
   git commit: %Q{ -m "Initial commit" }
 
-  say
   say "Kickoff app successfully created! 👍", :green
   say
   say "Switch to your app by running:"
