@@ -9,15 +9,20 @@ def source_paths
 end
 
 def add_gems
+  gem 'pg'                       if yes?("pg?")
   gem 'devise', '~> 4.8', '>= 4.8.1'
   gem 'friendly_id', '~> 5.4', '>= 5.4.2'
   gem 'cssbundling-rails'
   gem 'name_of_person'
   gem 'sidekiq', '~> 6.5', '>= 6.5.4'
-  gem 'rspec-rails', '~> 4.0.0.beta2'
-  gem 'guard-rspec', require: false
-  gem 'factory_bot_rails'
   gem 'stripe'
+
+  gem_group :development, :test do
+    gem 'byebug', platform: :mri
+    gem 'rspec-rails', '~> 4.0.0.beta2'
+    gem 'guard-rspec', require: false
+    gem 'factory_bot_rails'
+  end
 end
 
 def add_tailwind
@@ -40,7 +45,9 @@ def add_users
   environment "config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }",
               env: 'development'
 
-  route "root to: 'application#index'"
+  # Configure root
+  generate :controller, 'home index'
+  route "root to: 'home#index'"
 
   # Create Devise User
   generate :devise, "User", "first_name", "last_name", "admin:boolean"
