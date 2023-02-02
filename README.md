@@ -19,7 +19,11 @@ When creating a new rails app simply pass the template filename and ruby extensi
 ```bash
 $ rails new sample_app -j esbuild -m kickoff_app/template.rb
 ```
-
+For PostgreSQL use
+```bash
+$ rails new sample_app -j esbuild -m kickoff_app/template.rb --database=postgresql
+```
+ 
 # Once installed what do I get?
 
 - [Tailwind CSS](https://tailwind.com)

@@ -1,7 +1,7 @@
 =begin
 Template Name: Kickoff App
 Author: Tun Khine
-Instructions: $ rails new myapp -d <postgresql> -m template.rb
+Instructions: $ rails new sample_app -j esbuild -m kickoff_app/template.rb
 =end
 
 def source_paths
