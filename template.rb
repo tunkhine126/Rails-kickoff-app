@@ -9,7 +9,6 @@ def source_paths
 end
 
 def add_gems
-  gem 'pg'                       if yes?("pg?")
   gem 'devise', '~> 4.8', '>= 4.8.1'
   gem 'friendly_id', '~> 5.4', '>= 5.4.2'
   gem 'cssbundling-rails'
