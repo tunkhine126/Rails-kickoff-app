@@ -17,7 +17,7 @@ tailwind css
 When creating a new rails app simply pass the template filename and ruby extension through. I opt for esbuild instead of the default importmap configuration for JavaScript.
 
 ```bash
-$ rails new sample_app -j esbuild -m template.rb
+$ rails new sample_app -j esbuild -m kickoff_app/template.rb
 ```
 
 # Once installed what do I get?
