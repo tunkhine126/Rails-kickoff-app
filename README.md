@@ -39,4 +39,7 @@ $ rails new sample_app -j esbuild -m kickoff_app/template.rb --database=postgres
 
 ### Boot it up
 
-`$ ./bin/dev` 
+`$ ./bin/dev`
+
+### Screenshots
+![Screenshot 2023-02-02 at 2 25 56 PM](https://user-images.githubusercontent.com/19766367/216463202-70b61b9c-6e34-4f5a-b451-8e073cb9d738.png)
